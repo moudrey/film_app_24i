@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "film_app_24i",
+    "slug": "film_app_24i",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "film_app_24i"
+}
