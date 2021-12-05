@@ -4,10 +4,7 @@ const mainPageStyles = StyleSheet.create({
   main_view: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#181818',
-  },
-  main_text: {
-    color: 'white',
+    backgroundColor: '#898989',
   },
 });
 
