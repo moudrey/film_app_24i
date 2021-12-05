@@ -12,7 +12,7 @@ const useMuviesApiCall = () => {
     const apiCall = async () => {
       try {
         const call = await axios.get(apiUrl);
-        setMuviesData(call);
+        setMuviesData(call.data);
         setLoading(true);
       } catch (error) {
         console.log(error);
