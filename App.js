@@ -14,15 +14,30 @@ export default function App() {
           component={Pages.MainPage}
           options={{
             headerStyle: {
-              backgroundColor: '#1E1D1D',
+              backgroundColor: '#606060',
             },
             headerTitleAlign: 'center',
-            headerTintColor: '#6b0000',
+            headerTintColor: '#c9c9c9',
             headerTitleStyle: {
               fontWeight: 'bold',
-              fontSize: 50,
+              fontSize: 30,
             },
-            title: 'Home Page',
+            title: 'Streaming app',
+          }}
+        />
+        <Stack.Screen
+          name="About"
+          component={Pages.AboutPage}
+          options={{
+            headerStyle: {
+              backgroundColor: '#606060',
+            },
+            headerTitleAlign: 'center',
+            headerTintColor: '#c9c9c9',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 15,
+            },
           }}
         />
       </Stack.Navigator>
