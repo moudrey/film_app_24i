@@ -11,7 +11,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          component={Pages.MainPage}
+          component={Pages.MainScreen}
           options={{
             headerStyle: {
               backgroundColor: '#606060',
@@ -27,7 +27,7 @@ export default function App() {
         />
         <Stack.Screen
           name="About"
-          component={Pages.AboutPage}
+          component={Pages.DetailScreen}
           options={{
             headerStyle: {
               backgroundColor: '#606060',
@@ -44,4 +44,3 @@ export default function App() {
     </Navigation>
   );
 }
- 

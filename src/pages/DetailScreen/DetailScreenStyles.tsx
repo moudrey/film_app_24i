@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const AboutPageStyles = StyleSheet.create({
+export const DetailScreenStyles = StyleSheet.create({
   screen: {
     height: '100%',
     width: '100%',

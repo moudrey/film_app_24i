@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, Image, TouchableHighlight } from 'react-native';
-import { muvieVisual_styles } from './muvieVisualStyles';
-import CustomCarousel from './CustomCarousel';
+import { movieVisual_styles } from './MovieViewStyles';
+import CustomCarousel from '../CustomCarousel/CustomCarousel';
 
-const MuvieVisual = ({
+const MovieView = ({
   muvies,
   navigation,
-}: MuvieVisualProps): React.ReactElement => {
+}: MuvieViewProps): React.ReactElement => {
   return muvies.map(
     ({
       title,
@@ -27,12 +27,12 @@ const MuvieVisual = ({
   );
 };
 
-interface MuvieVisualProps {
+interface MuvieViewProps {
   muvies: any;
   navigation: { navigate: Function };
 }
 
-export default MuvieVisual;
+export default MovieView;
 
 // Maps of each part of page
 
@@ -45,10 +45,10 @@ const EachCarouselsMap = ({
 }: EachCarouselsMapProps): React.ReactElement => {
   return (
     <View>
-      <Text style={muvieVisual_styles.title}>{carouselsTitle}</Text>
+      <Text style={movieVisual_styles.title}>{carouselsTitle}</Text>
 
-      {carouselsItem.map((muvie) => {
-        posterArray.push(muvie.posterUrl);
+      {carouselsItem.map((movie) => {
+        posterArray.push(movie.posterUrl);
       })}
 
       <CustomCarousel
