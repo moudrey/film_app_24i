@@ -2,7 +2,14 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { MuvieCardStyles } from './MuvieCardStyles';
 
-const MuvieCard = ({ plot, year, duration, genres, actors, director }) => {
+const MuvieCard = ({
+  plot,
+  year,
+  duration,
+  genres,
+  actors,
+  director,
+}: MuvieCardProps): React.ReactElement => {
   return (
     <View>
       <GenresMap genres={genres} />
@@ -23,7 +30,11 @@ const MuvieCard = ({ plot, year, duration, genres, actors, director }) => {
     </View>
   );
 };
-const GenresMap = ({ genres }) => {
+const GenresMap = ({
+  genres,
+}: {
+  genres: Array<string>;
+}): React.ReactElement => {
   return (
     <View style={MuvieCardStyles.viewGenres}>
       {genres.map((genres) => {
@@ -36,4 +47,13 @@ const GenresMap = ({ genres }) => {
     </View>
   );
 };
+interface MuvieCardProps {
+  plot: string;
+  year: string;
+  duration: string;
+  genres: Array<string>;
+  director: string;
+  actors: string;
+}
+
 export default MuvieCard;

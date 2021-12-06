@@ -4,7 +4,13 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { AboutPageStyles } from './AboutPageStyles';
 import MuvieCard from '../../components/MuvieCard/MuvieCard';
 
-const AboutPage = ({ navigation, route }) => {
+const AboutPage = ({
+  navigation,
+  route,
+}: {
+  navigation: Object;
+  route: { params: { muvieInfo: AboutPageProps } };
+}): React.ReactElement => {
   const muvieInfo = route.params.muvieInfo;
 
   changeTitle({ navigation, muvieInfo });
@@ -33,4 +39,15 @@ const changeTitle = ({ navigation, muvieInfo }) => {
     navigation.setOptions({ title: muvieInfo.title });
   }, 100);
 };
+
+interface AboutPageProps {
+  plot: string;
+  year: string;
+  duration: string;
+  genres: Array<string>;
+  director: string;
+  actors: string;
+  posterUrl: string;
+}
+
 export default AboutPage;

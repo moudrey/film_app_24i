@@ -4,24 +4,28 @@ import React from 'react';
 
 const windowWidth = Dimensions.get('window').width;
 
-const CustomCarousel = ({ posterArray, navigation, muvieInfo }) => {
+const CustomCarousel = ({
+  posterArray,
+  navigation,
+  muvieInfo,
+}: CustomCarouselProps): React.ReactElement => {
   return (
     <Carousel
       sliderWidth={windowWidth}
       itemWidth={220}
       data={posterArray}
       keyExtractor={(_, index) => index.toString()}
-      renderItem={(item) => {
+      renderItem={(props: { index: number; item: string }) => {
         return (
           <TouchableHighlight
             onPress={() => {
               navigation.navigate('About', {
-                muvieInfo: muvieInfo[item.index],
+                muvieInfo: muvieInfo[props.index],
               });
             }}
           >
             <Image
-              source={{ uri: item.item }}
+              source={{ uri: props.item }}
               style={{ width: 220, height: 280, resizeMode: 'cover' }}
             />
           </TouchableHighlight>
@@ -30,5 +34,11 @@ const CustomCarousel = ({ posterArray, navigation, muvieInfo }) => {
     />
   );
 };
+
+interface CustomCarouselProps {
+  posterArray: Array<string>;
+  navigation: { navigate: Function };
+  muvieInfo: Array<{}>;
+}
 
 export default CustomCarousel;
