@@ -3,9 +3,15 @@
 
 
 
-This app contains carousel of choosen movies. You can choose film which you want to see by clicking on picture.
-After clicked on picture of you choosen movie you will tranfer to detail screen where you have detail as plot, actors, genres and so on
+## Home screen
 
+App show you chosen movies by defined specification.\
+All movies is display in carousel.\
+To show detail about movies just click on it.
+
+## Deatail Page
+
+After clicking on movie will show you screen where are details about movie as genres, plot and so on.\
 
 
 ## Technology:
