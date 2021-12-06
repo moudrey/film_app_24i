@@ -4,25 +4,28 @@ import axios from 'axios';
 const apiUrl =
   'https://raw.githubusercontent.com/24i/smartapps-test/main/data.json';
 
-const useMuviesApiCall = () => {
+const useMoviesApiCall = () => {
   const [isLoaded, setLoading] = useState(false);
-  const [muviesData, setMuviesData] =
+  const [moviesData, setMoviesData] =
     useState<{ carousels: Array<string | Array<{}>> }>();
 
   useEffect(() => {
     const apiCall = async () => {
       try {
         const call = await axios.get(apiUrl);
-        setMuviesData(call.data);
+        setMoviesData(call.data);
         setLoading(true);
       } catch (error) {
+        alert('No data');
         console.log(error);
+
+        setLoading(false);
       }
     };
 
     apiCall();
   }, []);
-  return { isLoaded, muviesData };
+  return { isLoaded, moviesData };
 };
 
-export default useMuviesApiCall;
+export default useMoviesApiCall;

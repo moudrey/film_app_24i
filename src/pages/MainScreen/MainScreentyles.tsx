@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const mainPageStyles = StyleSheet.create({
+const mainScreenStyles = StyleSheet.create({
   main_view: {
     width: '100%',
     height: '100%',
@@ -8,4 +8,4 @@ const mainPageStyles = StyleSheet.create({
   },
 });
 
-export default mainPageStyles;
+export default mainScreenStyles;

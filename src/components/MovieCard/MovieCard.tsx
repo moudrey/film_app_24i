@@ -1,29 +1,29 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { MuvieCardStyles } from './MuvieCardStyles';
+import { MovieCardStyles } from './MovieCardStyles';
 
-const MuvieCard = ({
+const MovieCard = ({
   plot,
   year,
   duration,
   genres,
   actors,
   director,
-}: MuvieCardProps): React.ReactElement => {
+}: MovieCardProps): React.ReactElement => {
   return (
     <View>
       <GenresMap genres={genres} />
-      <View style={MuvieCardStyles.viewInfo}>
-        <Text style={MuvieCardStyles.headers}>
+      <View style={MovieCardStyles.viewInfo}>
+        <Text style={MovieCardStyles.headers}>
           duration: {duration} min, year: {year}
         </Text>
         <View style={{ display: 'flex', flexDirection: 'column' }}>
-          <Text style={MuvieCardStyles.text}>{plot}</Text>
-          <Text style={MuvieCardStyles.text}>
-            <Text style={MuvieCardStyles.headers}>director:</Text> {director}
+          <Text style={MovieCardStyles.text}>{plot}</Text>
+          <Text style={MovieCardStyles.text}>
+            <Text style={MovieCardStyles.headers}>director:</Text> {director}
           </Text>
-          <Text style={MuvieCardStyles.text}>
-            <Text style={MuvieCardStyles.headers}>actors:</Text> {actors}
+          <Text style={MovieCardStyles.text}>
+            <Text style={MovieCardStyles.headers}>actors:</Text> {actors}
           </Text>
         </View>
       </View>
@@ -36,10 +36,10 @@ const GenresMap = ({
   genres: Array<string>;
 }): React.ReactElement => {
   return (
-    <View style={MuvieCardStyles.viewGenres}>
+    <View style={MovieCardStyles.viewGenres}>
       {genres.map((genres) => {
         return (
-          <Text key={genres} style={MuvieCardStyles.textMap}>
+          <Text key={genres} style={MovieCardStyles.textMap}>
             {genres}
           </Text>
         );
@@ -47,7 +47,7 @@ const GenresMap = ({
     </View>
   );
 };
-interface MuvieCardProps {
+interface MovieCardProps {
   plot: string;
   year: string;
   duration: string;
@@ -56,4 +56,4 @@ interface MuvieCardProps {
   actors: string;
 }
 
-export default MuvieCard;
+export default MovieCard;

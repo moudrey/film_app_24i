@@ -1,8 +1,7 @@
-import MainPage from './MainPage/index';
-import AboutPage from './AboutPage/index';
-
+import MainScreen from './MainScreen';
+import DetailScreen from './DetailScreen';
 const Pages = Object.freeze({
-  MainPage,
-  AboutPage,
+  MainScreen,
+  DetailScreen,
 });
 export default Pages;

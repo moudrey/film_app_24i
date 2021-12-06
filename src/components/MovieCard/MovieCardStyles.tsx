@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const MuvieCardStyles = StyleSheet.create({
+export const MovieCardStyles = StyleSheet.create({
   headers: {
     fontWeight: 'bold',
     color: '#c9c9c9',

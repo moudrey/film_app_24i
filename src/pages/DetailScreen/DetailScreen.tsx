@@ -1,24 +1,24 @@
 import { Text, Image } from 'react-native';
 import React from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
-import { AboutPageStyles } from './AboutPageStyles';
-import MuvieCard from '../../components/MuvieCard/MuvieCard';
+import { DetailScreenStyles } from './DetailScreenStyles';
+import MuvieCard from '../../components/MovieCard';
 
-const AboutPage = ({
+const DetailScreen = ({
   navigation,
   route,
 }: {
   navigation: Object;
-  route: { params: { muvieInfo: AboutPageProps } };
+  route: { params: { muvieInfo: DetailScreenProps } };
 }): React.ReactElement => {
   const muvieInfo = route.params.muvieInfo;
 
   changeTitle({ navigation, muvieInfo });
 
   return (
-    <ScrollView style={AboutPageStyles.screen}>
+    <ScrollView style={DetailScreenStyles.screen}>
       <Image
-        style={AboutPageStyles.image}
+        style={DetailScreenStyles.image}
         source={{ uri: muvieInfo.posterUrl }}
       />
 
@@ -40,7 +40,7 @@ const changeTitle = ({ navigation, muvieInfo }) => {
   }, 100);
 };
 
-interface AboutPageProps {
+interface DetailScreenProps {
   plot: string;
   year: string;
   duration: string;
@@ -50,4 +50,4 @@ interface AboutPageProps {
   posterUrl: string;
 }
 
-export default AboutPage;
+export default DetailScreen;
