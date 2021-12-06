@@ -8,7 +8,39 @@ export default function App() {
   return (
     <Navigation>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Pages.MainPage} />
+
+        <Stack.Screen
+          name="Home"
+          component={Pages.MainScreen}
+          options={{
+            headerStyle: {
+              backgroundColor: '#606060',
+            },
+            headerTitleAlign: 'center',
+            headerTintColor: '#c9c9c9',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30,
+            },
+            title: 'Streaming app',
+          }}
+        />
+        <Stack.Screen
+          name="About"
+          component={Pages.DetailScreen}
+          options={{
+            headerStyle: {
+              backgroundColor: '#606060',
+            },
+            headerTitleAlign: 'center',
+            headerTintColor: '#c9c9c9',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 15,
+            },
+          }}
+        />
+
       </Stack.Navigator>
     </Navigation>
   );
