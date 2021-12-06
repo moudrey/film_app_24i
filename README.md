@@ -9,7 +9,7 @@ App show you chosen movies by defined specification.\
 All movies are display in carousel.\
 To show detail about movies just click on it.
 
-## Deatail Page
+## Detail Page
 
 After clicking on movie will show you screen where are details about movie as genres, plot and so on.
 
