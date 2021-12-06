@@ -6,7 +6,7 @@
 ## Home screen
 
 App show you chosen movies by defined specification.\
-All movies is display in carousel.\
+All movies are display in carousel.\
 To show detail about movies just click on it.
 
 ## Deatail Page
