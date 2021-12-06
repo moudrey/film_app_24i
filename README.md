@@ -11,7 +11,7 @@ To show detail about movies just click on it.
 
 ## Deatail Page
 
-After clicking on movie will show you screen where are details about movie as genres, plot and so on.\
+After clicking on movie will show you screen where are details about movie as genres, plot and so on.
 
 
 ## Technology:
