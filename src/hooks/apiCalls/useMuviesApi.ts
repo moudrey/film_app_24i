@@ -6,7 +6,8 @@ const apiUrl =
 
 const useMuviesApiCall = () => {
   const [isLoaded, setLoading] = useState(false);
-  const [muviesData, setMuviesData] = useState({});
+  const [muviesData, setMuviesData] =
+    useState<{ carousels: Array<string | Array<{}>> }>();
 
   useEffect(() => {
     const apiCall = async () => {
@@ -21,7 +22,6 @@ const useMuviesApiCall = () => {
 
     apiCall();
   }, []);
-
   return { isLoaded, muviesData };
 };
 
