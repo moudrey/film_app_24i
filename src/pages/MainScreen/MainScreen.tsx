@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import Loading from '../../components/LoadingScreen';
 import useMoviesApiCall from '../../hooks/apiCalls/useMoviesApi';
 import MuvieView from '../../components/MovieVisual';
-import MainScreenStyles from './MainScreentyles';
+import MainScreenStyles from './MainScreenStyles';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const MainScreen = ({ navigation }: { navigation: { navigate: Function } }) => {
