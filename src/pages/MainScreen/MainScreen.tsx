@@ -1,7 +1,7 @@
 import React from 'react';
 import Loading from '../../components/LoadingScreen';
 import useMoviesApiCall from '../../hooks/apiCalls/useMoviesApi';
-import MuvieView from '../../components/MovieVisual';
+import MuvieView from '../../components/MovieView';
 import MainScreenStyles from './MainScreenStyles';
 import { ScrollView } from 'react-native-gesture-handler';
 
